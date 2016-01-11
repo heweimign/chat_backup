@@ -20,12 +20,12 @@ public class HandshakeInterceptor extends HttpSessionHandshakeInterceptor {
         //解决The extension [x-webkit-deflate-frame] is not supported问题  
         if(request.getHeaders().containsKey("Sec-WebSocket-Extensions")) {  
             request.getHeaders().set("Sec-WebSocket-Extensions", "permessage-deflate");  
-        }  
+        }
           
         System.out.println("Before Handshake");  
         return super.beforeHandshake(request, response, wsHandler, attributes);  
-    }  
-  
+    } 
+    
     @Override  
     public void afterHandshake(ServerHttpRequest request,  
             ServerHttpResponse response, WebSocketHandler wsHandler,  

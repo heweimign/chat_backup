@@ -72,7 +72,7 @@
                 setConnected(true);  
                 //log('Info: connection opened.');  
             };  
-            ws.onmessage = function (event) {  
+            ws.onmessage = function (event) {
                 //alert('Received:' + event.data);  
                 log('Received: ' + event.data);  
             };  
@@ -117,7 +117,7 @@
         }  
   
         function updateTransport(transport) {  
-            alert(transport);  
+          //alert(transport);  
           transports = (transport == 'all') ?  [] : [transport];  
         }  
           
